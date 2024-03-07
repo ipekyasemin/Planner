@@ -15,7 +15,7 @@ class MainViewViewModel:ObservableObject {
     init () {
         Auth.auth().addStateDidChangeListener {[weak self] _,user in
             DispatchQueue.main.async {
-                self?.currenUserId = user?.uid ?? ""
+                self?.currenUserId = user?.uid ?? "1"
             }
         }
     }
